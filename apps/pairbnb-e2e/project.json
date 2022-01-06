@@ -1,0 +1,28 @@
+{
+  "root": "apps/pairbnb-e2e",
+  "sourceRoot": "apps/pairbnb-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/pairbnb-e2e/cypress.json",
+        "devServerTarget": "pairbnb:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "pairbnb:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/pairbnb-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["pairbnb"]
+}

@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces",
+    "pairbnb": "apps/pairbnb",
+    "pairbnb-e2e": "apps/pairbnb-e2e"
+  }
+}
